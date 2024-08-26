@@ -1,0 +1,37 @@
+{
+    "name": "arkitecht/schedule-alerts",
+    "description": "Get alerted when scheduled scripts fail",
+    "keywords": [
+        "alerts",
+        "schedule",
+        "notifications",
+        "laravel"
+    ],
+    "license": "MIT",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Arkitecht\\ScheduleFailureAlert\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.3",
+        "phpunit/phpunit": "^11.3"
+    },
+    "require": {
+        "laravel/framework:": ">=10",
+        "laravel/slack-notification-channel": "^3.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Arkitecht\\ScheduleFailureAlert\\Providers\\ScheduleAlertsServiceProvider"
+            ]
+        }
+    }
+}
